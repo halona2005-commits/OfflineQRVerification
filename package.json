@@ -1,0 +1,24 @@
+{
+  "name": "offline-qr-verification",
+  "version": "1.0.0",
+  "description": "Full stack offline verification and document management system with user and admin panels.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["qr", "verification", "express", "json", "multer", "dashboard"],
+  "author": "OfflineQRVerification",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.4",
+    "html5-qrcode": "^2.3.8",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

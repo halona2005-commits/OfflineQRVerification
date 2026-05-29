@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard | VeriScan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell dashboard-shell">
+    <aside class="sidebar">
+      <div class="brand-row">
+        <div class="brand-mark">QR</div>
+        <div>
+          <h1>VeriScan</h1>
+          <p>User Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="menu-list">
+        <button class="menu-link active" data-panel="summary">Summary</button>
+        <button class="menu-link" data-panel="upload">Upload Docs</button>
+        <button class="menu-link" data-panel="qrcode">Generate QR</button>
+      </nav>
+
+      <button class="btn ghost-btn logout-btn" id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="main-grid">
+      <section class="panel card" id="summaryPanel">
+        <div class="panel-header">
+          <h2>Welcome back, <span id="userName">User</span></h2>
+          <div class="status-pill" id="userVerified">Pending</div>
+        </div>
+        <p class="muted">Upload documents, generate signed QR codes, and verify them with your camera.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>User ID</h3>
+            <p id="userId">-</p>
+          </div>
+          <div class="info-card">
+            <h3>Email</h3>
+            <p id="userEmail">-</p>
+          </div>
+          <div class="info-card">
+            <h3>Documents</h3>
+            <p id="userDocsCount">0 files</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel card hidden" id="uploadPanel">
+        <h3>Upload Documents</h3>
+        <p class="muted">Attach multiple files for verification and safe storage.</p>
+        <form id="uploadForm" class="upload-form">
+          <label class="file-label">
+            <span>Select documents</span>
+            <input type="file" id="fileInput" name="documents" multiple />
+          </label>
+          <button type="submit" class="btn primary-btn">Upload Files</button>
+        </form>
+        <div class="upload-status" id="uploadStatus"></div>
+        <div class="docs-grid" id="documentsList"></div>
+      </section>
+
+      <section class="panel card hidden" id="qrPanel">
+        <h3>Generate Signed QR Code</h3>
+        <p class="muted">This QR contains your user data and a digital signature to protect the payload.</p>
+        <div class="qr-output">
+          <div id="qrcode"></div>
+          <div class="qr-meta" id="qrMeta"></div>
+        </div>
+        <button class="btn primary-btn" id="generateQrBtn">Generate QR</button>
+      </section>
+
+      <!-- Note: QR verification is available only in the Admin Panel -->
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

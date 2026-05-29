@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "d7325a3b-906f-447d-b024-c7848d7bf735",
+      "name": "xyz",
+      "email": "xyz@gmail.com",
+      "password": "$2a$10$ygV79VNreH6cT3BVmR9s.OxVMzk0grYWsvcmZt1NqVRqBypAO1YNy",
+      "verified": true,
+      "documents": [
+        {
+          "originalName": "svit (1).png",
+          "filename": "d7325a3b-906f-447d-b024-c7848d7bf735_1780054743746_svit__1_.png",
+          "url": "/uploads/d7325a3b-906f-447d-b024-c7848d7bf735_1780054743746_svit__1_.png",
+          "uploadedAt": "2026-05-29T11:39:03.753Z"
+        }
+      ],
+      "createdAt": "2026-05-29T11:38:30.295Z"
+    }
+  ]
+}

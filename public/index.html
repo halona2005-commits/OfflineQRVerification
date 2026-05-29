@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline QR Verification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell auth-shell">
+    <div class="auth-card">
+      <div class="brand-row">
+        <div class="brand-mark">QR</div>
+        <div>
+          <h1>VeriScan</h1>
+          <p>Secure document upload and offline QR verification.</p>
+        </div>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="tab-button active" data-view="login">Login</button>
+        <button class="tab-button" data-view="register">Register</button>
+      </div>
+
+      <div class="auth-form" id="loginView">
+        <h2>Member Login</h2>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="Password" />
+        </div>
+        <button class="btn primary-btn" id="loginBtn">Login</button>
+      </div>
+
+      <div class="auth-form hidden" id="registerView">
+        <h2>Create Account</h2>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="registerName" placeholder="Jane Doe" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="registerEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="registerPassword" placeholder="Password" />
+        </div>
+        <button class="btn primary-btn" id="registerBtn">Register</button>
+      </div>
+
+      <div class="helper-row">
+        <p>Want admin access?</p>
+        <a href="admin.html" class="link-button">Admin Panel</a>
+      </div>
+      <div class="status-message" id="authMessage"> </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

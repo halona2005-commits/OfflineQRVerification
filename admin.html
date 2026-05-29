@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline QR Verification System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">QR</div>
+        <div>
+          <h1>VeriScan</h1>
+          <p>Offline QR System</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-link active" data-view="generate" id="generateBtn">
+          <span class="nav-icon">&#128190;</span>
+          Generate QR
+        </button>
+        <button class="nav-link" data-view="verify" id="verifyBtn">
+          <span class="nav-icon">&#128119;</span>
+          Verify QR
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Built with HTML, CSS, JS</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="page-header">
+        <div>
+          <h2 id="pageTitle">Generate QR</h2>
+          <p>Use the dashboard to create secure QR codes and verify them using your camera.</p>
+        </div>
+      </section>
+
+      <div class="cards-grid">
+        <section class="card card-panel" id="generateView">
+          <h3>QR Generator</h3>
+          <p>Enter a name and ID to create a signed offline QR.</p>
+
+          <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" placeholder="Jane Doe" />
+          </div>
+          <div class="form-group">
+            <label for="idInput">ID</label>
+            <input type="text" id="idInput" placeholder="2026-0001" />
+          </div>
+
+          <button class="btn primary-btn" id="generateBtnAction">Generate QR</button>
+
+          <div class="qr-card" id="qrCard">
+            <div class="qr-card-inner">
+              <div id="qrcode"></div>
+              <div class="qr-details" id="qrDetails">
+                <p class="muted">QR Output will appear here after generating.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card card-panel hidden" id="verifyView">
+          <h3>QR Verification</h3>
+          <p>Scan a QR code and validate the embedded digital signature.</p>
+
+          <button class="btn secondary-btn" id="startScannerBtn">Start Scanner</button>
+          <button class="btn ghost-btn hidden" id="stopScannerBtn">Stop Scanner</button>
+
+          <div class="scanner-card" id="scannerArea">
+            <div id="reader" class="scanner-box"></div>
+            <div class="status-panel" id="verifyStatus">
+              <p class="muted">Scanner is inactive. Tap Start Scanner to begin.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
