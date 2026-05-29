@@ -101,4 +101,3 @@ Data is stored in `database.json` in this format:
 - No external database required
 - All code is beginner-friendly with comments
 
-Enjoy building your final-year project!
