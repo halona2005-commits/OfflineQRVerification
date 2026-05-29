@@ -49,10 +49,6 @@ OfflineQRVerification/
    - User portal: `http://localhost:4000/`
    - Admin portal: `http://localhost:4000/admin.html`
 
-## Admin Login
-- Email: `admin@example.com`
-- Password: `Admin123!`
-
 ## Features
 - User registration and login with hashed passwords (bcryptjs)
 - Multiple document uploads and file storage
