@@ -34,6 +34,11 @@ OfflineQRVerification/
 ├── README.md
 └── server.js
 ```
+## Live Demo
+https://offlineqrverification.onrender.com
+
+## GitHub Repository
+https://github.com/halona2005-commits/OfflineQRVerification
 
 ## Setup
 
